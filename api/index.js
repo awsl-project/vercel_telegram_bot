@@ -21,7 +21,7 @@ bot.command("sese", send_awsl)
 bot.command("awsl", send_awsl)
 
 const send_moyu = async (ctx) => {
-    const res = await fetch(`${process.env.API_URL}/moyu`)
+    const res = await fetch(process.env.MOYU_URL);
     await ctx.reply(await res.text())
 }
 bot.command("moyu", send_moyu)
